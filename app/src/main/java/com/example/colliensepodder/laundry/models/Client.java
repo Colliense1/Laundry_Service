@@ -6,6 +6,7 @@ public class Client {
     String firstName;
     String lastName;
     String phoneNumber;
+
     String email;
 
     public Client(String firstName, String lastName, String phoneNumber, String email, String address, String password) {
