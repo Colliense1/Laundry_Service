@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UserLogin">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgview_ic_user_login"
+            android:layout_weight="4"
+            android:src="@drawable/ic_user_login"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <View
+            android:layout_weight=".9"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_margin="?actionBarSize"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="#fff"
+            android:text="User Sign in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editTextPhoneNumber"
+            android:textColor="#fff"
+            android:textColorHint="#eee"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:hint="Phone Number"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@drawable/rounded_corner"
+            android:textSize="17sp"
+            android:maxEms="11"
+            android:maxLines="1"
+            android:inputType="number"
+            android:drawablePadding="12.0dip"
+            android:drawableLeft="@drawable/ic_phone_black_24dp" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:textColor="#fff"
+            android:textColorHint="#eee"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@drawable/rounded_corner"
+            android:textSize="17sp"
+            android:maxEms="10"
+            android:maxLines="1"
+            android:drawablePadding="12.0dip"
+            android:drawableLeft="@drawable/ic_lock_black_24dp" />
+
+        <Button
+            android:id="@+id/button_signin"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/rounded_corner_button"
+            android:text="sign in"
+            android:textColor="#4b4b4b"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+
+        <TextView
+            android:layout_marginTop="75.0dip"
+            android:textColor="#000"
+            android:textSize="17.0dip"
+            android:text="Don't have an account ?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textView_signup"
+            android:layout_marginTop="10dp"
+            android:text="Sign up here"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="20.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </LinearLayout>
+
+</RelativeLayout>

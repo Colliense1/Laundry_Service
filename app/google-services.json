@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "613029432648",
+    "firebase_url": "https://laundry-master.firebaseio.com",
+    "project_id": "laundry-master",
+    "storage_bucket": "laundry-master.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613029432648:android:bb4dfa72d1973825",
+        "android_client_info": {
+          "package_name": "com.example.colliensepodder.laundry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613029432648-1kdla0kr4ekg5pob85dtp8t9sbieod6i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.colliensepodder.laundry",
+            "certificate_hash": "914c8ff2eb2b8c0f7afdbc0347b3ab0d1a601dbe"
+          }
+        },
+        {
+          "client_id": "613029432648-a82bf0ik0jgrfeevsdci1fts3j9omq69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFs7VgcEC8_MRwx4hgZ8KWgmyjACNzvVY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613029432648-a82bf0ik0jgrfeevsdci1fts3j9omq69.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

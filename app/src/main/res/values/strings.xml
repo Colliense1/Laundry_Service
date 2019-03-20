@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Laundry</string>
+
+    //first_activity
+    <string name="service_name">Laundry Service</string>
+    <string name="user_button">User</string>
+    <string name="owner_button">Owner</string>
+
+
+</resources>
