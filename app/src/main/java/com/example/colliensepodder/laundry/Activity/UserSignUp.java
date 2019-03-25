@@ -108,7 +108,7 @@ public class UserSignUp extends AppCompatActivity {
                 database.clientSignUp(UserSignUp.this, client, new Database.ClientSignup() {
                     @Override
                     public void issignup(Boolean IsSignUp) {
-                        Toast.makeText(getApplicationContext(), "Signup Succesfull", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Signup Succesfully", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(UserSignUp.this, UserLogin.class));
                     }
                 });

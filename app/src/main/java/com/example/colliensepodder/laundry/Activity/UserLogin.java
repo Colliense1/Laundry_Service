@@ -59,7 +59,7 @@ public class UserLogin extends AppCompatActivity {
                     @Override
                     public void issignin(Boolean IsSignIn) {
                         if (IsSignIn == true) {
-                            Toast.makeText(getApplicationContext(), "Login succesfull", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Login succesfully", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(UserLogin.this, LaundryShopList.class));
                         } else {
                             Toast.makeText(getApplicationContext(), "Wrong username or password", Toast.LENGTH_SHORT).show();

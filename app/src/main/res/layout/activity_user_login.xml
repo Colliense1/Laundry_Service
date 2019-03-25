@@ -59,6 +59,9 @@
             android:drawablePadding="12.0dip"
             android:drawableLeft="@drawable/ic_phone_black_24dp" />
 
+
+
+
         <EditText
             android:id="@+id/editTextPassword"
             android:textColor="#fff"
@@ -76,6 +79,7 @@
             android:maxLines="1"
             android:drawablePadding="12.0dip"
             android:drawableLeft="@drawable/ic_lock_black_24dp" />
+
 
         <Button
             android:id="@+id/button_signin"

@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 
 import com.example.colliensepodder.laundry.Activity.UserSignUp;
 import com.example.colliensepodder.laundry.models.Client;
+import com.example.colliensepodder.laundry.models.Owner;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -16,12 +17,21 @@ import com.google.firebase.database.ValueEventListener;
 public class Database {
     DatabaseReference myDatabaseRef = FirebaseDatabase.getInstance().getReference();
     DatabaseReference clientRef = myDatabaseRef.child("client");
+    DatabaseReference ownerRef = myDatabaseRef.child("owner");
 
     public interface ClientSignup {
         public void issignup(Boolean IsSignUp);
     }
 
     public interface ClientSignin {
+        public void issignin(Boolean IsSignIn);
+    }
+
+    public interface OwnerSignup {
+        public void issignup(Boolean IsSignUp);
+    }
+
+    public interface OwnerSignin {
         public void issignin(Boolean IsSignIn);
     }
 
@@ -51,6 +61,43 @@ public class Database {
                     }
                 }
                 clientSignin.issignin(flag);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+
+    //Owner Signup Signin
+    public void ownerSignUp(Context context, final Owner owner, final OwnerSignup ownerSignup) {
+        ownerRef.push().setValue(owner).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                ownerSignup.issignup(true);
+
+            }
+        });
+
+    }
+
+    public void ownerSignIn(Context context, final Owner owner, final OwnerSignin ownerSignin) {
+
+        ownerRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Boolean flag = false;
+                for (DataSnapshot dsp : dataSnapshot.getChildren()) {
+                    Owner dbOwner = dsp.getValue(Owner.class);
+                    if (dbOwner.getPhoneNumber().toString().equals(owner.getPhoneNumber()) && dbOwner.getPassword().toString().equals(owner.getPassword())) {
+                        flag = true;
+                        // break;
+                    }
+                }
+                ownerSignin.issignin(flag);
 
             }
 

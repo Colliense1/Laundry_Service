@@ -8,8 +8,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.colliensepodder.laundry.Activity.database.Database;
 import com.example.colliensepodder.laundry.R;
+import com.example.colliensepodder.laundry.models.Client;
+import com.example.colliensepodder.laundry.models.Owner;
 
 /**
  * Created by colliensepodder on 3/17/2019.
@@ -36,6 +40,41 @@ public class OwnerLogin extends AppCompatActivity {
         editTextPassword = findViewById(R.id.editTextPassword);
         button_signin = findViewById(R.id.button_signin);
         textView_signup = findViewById(R.id.textView_signup);
+
+        button_signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (editTextPhoneNumber.getText().toString().isEmpty()) {
+                    editTextPhoneNumber.setError("invalid");
+                    return;
+                }
+                if (editTextPassword.getText().toString().isEmpty()) {
+                    editTextPassword.setError("Invalid");
+                    return;
+                }
+                if (editTextPassword.length() < 8) {
+                    editTextPassword.setError("Password length minimum 8 character");
+                    return;
+                }
+
+                Owner owner = new Owner();
+                owner.setPhoneNumber(editTextPhoneNumber.getText().toString());
+                owner.setPassword(editTextPassword.getText().toString());
+                Database database = new Database();
+                database.ownerSignIn(OwnerLogin.this, owner, new Database.OwnerSignin() {
+                    @Override
+                    public void issignin(Boolean IsSignIn) {
+                        if (IsSignIn == true) {
+                            Toast.makeText(getApplicationContext(), "Login succesfull", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(OwnerLogin.this, LaundryShopList.class));
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Wrong username or password", Toast.LENGTH_SHORT).show();
+
+                        }
+                    }
+                });
+            }
+        });
 
         textView_signup.setOnClickListener(new View.OnClickListener() {
             @Override
