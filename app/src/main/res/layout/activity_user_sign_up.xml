@@ -57,7 +57,7 @@
                 android:textColor="#fff"
                 android:textColorHint="#eee"
                 android:textAlignment="center"
-                android:background="@drawable/rounded_corner" />
+                android:background="@drawable/rounded_corner_button" />
 
             <View
                 android:layout_width="8.0dip"
@@ -74,7 +74,7 @@
                 android:textColorHint="#eee"
                 android:textAlignment="center"
                 android:layout_marginLeft="3.0dip"
-                android:background="@drawable/rounded_corner" />
+                android:background="@drawable/rounded_corner_button" />
 
         </LinearLayout>
 
@@ -84,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:layout_margin="10dp"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/rounded_corner_button"
             android:drawableLeft="@drawable/ic_phone_black_24dp"
             android:drawablePadding="12.0dip"
             android:hint="Phone Number"
@@ -102,7 +102,7 @@
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:layout_margin="10dp"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/rounded_corner_button"
             android:drawableLeft="@drawable/ic_email_black_24dp"
             android:drawablePadding="12.0dip"
             android:hint="Email"
@@ -120,7 +120,7 @@
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:layout_margin="10dp"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/rounded_corner_button"
             android:drawableLeft="@drawable/ic_add_location_black_24dp"
             android:drawablePadding="12.0dip"
             android:hint="Address"
@@ -136,7 +136,7 @@
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:layout_margin="10dp"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/rounded_corner_button"
             android:drawableLeft="@drawable/ic_lock_black_24dp"
             android:drawablePadding="12.0dip"
             android:hint="Password"
@@ -154,7 +154,7 @@
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:layout_margin="10dp"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/rounded_corner_button"
             android:drawableLeft="@drawable/ic_lock_black_24dp"
             android:drawablePadding="12.0dip"
             android:hint="Confirm Password"
@@ -171,7 +171,7 @@
             android:id="@+id/button_signup"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
-            android:background="@drawable/rounded_corner_button"
+            android:background="@drawable/user_rounded_corner_edittext"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:layout_marginTop="10.0dip"
