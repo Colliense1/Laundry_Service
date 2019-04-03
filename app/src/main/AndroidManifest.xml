@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Activity.OwnerAdding"></activity>
         <activity android:name=".FirstActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +21,7 @@
         <activity android:name=".Activity.UserSignUp" />
         <activity android:name=".Activity.OwnerLogin" />
         <activity android:name=".Activity.OwnerSignUp" />
-        <activity android:name=".Activity.LaundryShopList"></activity>
+        <activity android:name=".Activity.LaundryShopList" />
     </application>
 
 </manifest>

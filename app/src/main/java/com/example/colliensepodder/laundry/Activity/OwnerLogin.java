@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ public class OwnerLogin extends AppCompatActivity {
     public EditText editTextPassword;
     public Button button_signin;
     public TextView textView_signup;
+    public ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,8 @@ public class OwnerLogin extends AppCompatActivity {
         editTextPassword = findViewById(R.id.editTextPassword);
         button_signin = findViewById(R.id.button_signin);
         textView_signup = findViewById(R.id.textView_signup);
+        progressBar = findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.GONE);
 
         button_signin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +60,7 @@ public class OwnerLogin extends AppCompatActivity {
                     editTextPassword.setError("Password length minimum 8 character");
                     return;
                 }
-
+                progressBar.setVisibility(View.VISIBLE);
                 Owner owner = new Owner();
                 owner.setPhoneNumber(editTextPhoneNumber.getText().toString());
                 owner.setPassword(editTextPassword.getText().toString());
@@ -66,7 +70,9 @@ public class OwnerLogin extends AppCompatActivity {
                     public void issignin(Boolean IsSignIn) {
                         if (IsSignIn == true) {
                             Toast.makeText(getApplicationContext(), "Login succesfull", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(OwnerLogin.this, LaundryShopList.class));
+
+                            progressBar.setVisibility(View.GONE);
+                            startActivity(new Intent(OwnerLogin.this, OwnerAdding.class));
                         } else {
                             Toast.makeText(getApplicationContext(), "Wrong username or password", Toast.LENGTH_SHORT).show();
 

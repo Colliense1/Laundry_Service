@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.colliensepodder.laundry.Activity.database.Database;
@@ -28,6 +29,8 @@ public class OwnerSignUp extends AppCompatActivity {
     public EditText editTextPassword;
     public EditText editTextConfirmPassword;
     public Button button_signup;
+    public ProgressBar progressBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,8 @@ public class OwnerSignUp extends AppCompatActivity {
         editTextPassword = findViewById(R.id.editTextPassword);
         editTextConfirmPassword = findViewById(R.id.editTextConfirmPassword);
         button_signup = findViewById(R.id.button_signup);
+        progressBar = findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.GONE);
 
         button_signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,6 +103,7 @@ public class OwnerSignUp extends AppCompatActivity {
                     return;
                 }
 
+                progressBar.setVisibility(View.VISIBLE);
                 Owner owner = new Owner(
                         editText_firstname.getText().toString(),
                         editText_lastname.getText().toString(),
@@ -110,6 +116,7 @@ public class OwnerSignUp extends AppCompatActivity {
                     @Override
                     public void issignup(Boolean IsSignUp) {
                         Toast.makeText(getApplicationContext(), "Signup Succesfully", Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.GONE);
                         startActivity(new Intent(OwnerSignUp.this, OwnerLogin.class));
                     }
                 });
