@@ -18,6 +18,7 @@ public class Database {
     DatabaseReference myDatabaseRef = FirebaseDatabase.getInstance().getReference();
     DatabaseReference clientRef = myDatabaseRef.child("client");
     DatabaseReference ownerRef = myDatabaseRef.child("owner");
+    DatabaseReference ownerAddingRef = myDatabaseRef.child("ownerAdding");
 
     public interface ClientSignup {
         public void issignup(Boolean IsSignUp);
