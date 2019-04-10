@@ -17,6 +17,7 @@ public class LaundryShopList extends AppCompatActivity {
     public RecyclerView recyclerview_shoplist;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
