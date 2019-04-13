@@ -19,8 +19,7 @@ import java.util.ArrayList;
 public class LaundryShopList extends AppCompatActivity {
 
     public RecyclerView recyclerview_shoplist;
-ArrayList<Shop>shops=new ArrayList<>();
-
+    ArrayList<Shop> shops = new ArrayList<>();
 
 
     @Override
@@ -40,7 +39,7 @@ ArrayList<Shop>shops=new ArrayList<>();
     }
 
     private void setAllShop() {
-        Database db=new Database();
+        Database db = new Database();
         db.getAllShop(this, new Database.AllShop() {
             @Override
             public void getAllShop(ArrayList<Shop> shops) {
