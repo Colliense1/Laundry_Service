@@ -20,7 +20,7 @@ import com.example.colliensepodder.laundry.models.Owner;
  * Created by colliensepodder on 3/17/2019.
  */
 public class OwnerLogin extends AppCompatActivity {
-
+public static String LOGGEDIN_OWNER_PHONE;
     public ImageView imgview_ic_owner_login;
     public EditText editText_firstname;
     public EditText editText_lastname;
@@ -61,7 +61,7 @@ public class OwnerLogin extends AppCompatActivity {
                     return;
                 }
                 progressBar.setVisibility(View.VISIBLE);
-                Owner owner = new Owner();
+                final Owner owner = new Owner();
                 owner.setPhoneNumber(editTextPhoneNumber.getText().toString());
                 owner.setPassword(editTextPassword.getText().toString());
                 Database database = new Database();
@@ -70,9 +70,9 @@ public class OwnerLogin extends AppCompatActivity {
                     public void issignin(Boolean IsSignIn) {
                         if (IsSignIn == true) {
                             Toast.makeText(getApplicationContext(), "Login succesfull", Toast.LENGTH_SHORT).show();
-
+                                LOGGEDIN_OWNER_PHONE=owner.getPhoneNumber().toString();
                             progressBar.setVisibility(View.GONE);
-                            startActivity(new Intent(OwnerLogin.this, OwnerAdding.class));
+                            startActivity(new Intent(OwnerLogin.this, ShowOwnerAddData.class));
                         } else {
                             Toast.makeText(getApplicationContext(), "Wrong username or password", Toast.LENGTH_SHORT).show();
 

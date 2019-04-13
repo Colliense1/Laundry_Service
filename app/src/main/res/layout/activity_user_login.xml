@@ -53,6 +53,7 @@
 
 
                 <EditText
+                    android:text="01942040142"
                     android:id="@+id/editTextPhoneNumber"
                     android:layout_width="match_parent"
                     android:layout_height="?actionBarSize"
@@ -72,6 +73,7 @@
 
 
                 <EditText
+                    android:text="12345678"
                     android:id="@+id/editTextPassword"
                     android:layout_width="match_parent"
                     android:layout_height="?actionBarSize"

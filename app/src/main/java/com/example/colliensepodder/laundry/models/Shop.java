@@ -1,6 +1,6 @@
 package com.example.colliensepodder.laundry.models;
 
-public class OwnerAdd {
+public class Shop {
     String shopName;
     String phoneNumber;
     String address;
@@ -8,10 +8,9 @@ public class OwnerAdd {
     String pantCost;
     String blanketCost;
     String curtainCost;
+String email;
 
-    public OwnerAdd(String shopName, String phoneNumber, String address, String shirtCost, String pantCost,
-                    String blanketCost, String curtainCost){
-
+    public Shop(String shopName, String phoneNumber, String address, String shirtCost, String pantCost, String blanketCost, String curtainCost, String email) {
         this.shopName = shopName;
         this.phoneNumber = phoneNumber;
         this.address = address;
@@ -19,10 +18,18 @@ public class OwnerAdd {
         this.pantCost = pantCost;
         this.blanketCost = blanketCost;
         this.curtainCost = curtainCost;
-
+        this.email = email;
     }
 
-    public OwnerAdd(){
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Shop() {
 
     }
 
