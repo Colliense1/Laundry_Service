@@ -21,8 +21,7 @@ public class MyShopDetailsAdopter extends RecyclerView.Adapter<MyShopDetailsAdop
 
 
     private ArrayList<Shop> shops;
-
-
+    
     public MyShopDetailsAdopter(ArrayList<Shop> data) {
         this.shops = data;
     }
