@@ -20,7 +20,6 @@ import java.util.ArrayList;
 public class MyShopDetailsAdopter extends RecyclerView.Adapter<MyShopDetailsAdopter.ViewHolder> {
 
 
-    //LayoutInflater layoutInflater;
     private ArrayList<Shop> shops;
 
 
@@ -32,7 +31,6 @@ public class MyShopDetailsAdopter extends RecyclerView.Adapter<MyShopDetailsAdop
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.shop_details, parent, false);
-        //View view = layoutInflater.inflate(R.layout.shop_list_recycler_layout,parent,false);
         return new ViewHolder(view);
     }
 
