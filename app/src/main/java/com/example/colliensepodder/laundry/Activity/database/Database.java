@@ -37,9 +37,12 @@ public class Database {
 
     public interface OwnerSignin {
         public void issignin(Boolean IsSignIn);
-    }public interface OwnerShopAdd {
+    }
+
+    public interface OwnerShopAdd {
         public void isShopAdd(Boolean IsSignIn);
     }
+
     public interface AllShop {
         public void getAllShop(ArrayList<Shop> shops);
     }
@@ -55,7 +58,8 @@ public class Database {
         });
 
     }
-     public void shopAdd(Context context, final Shop shop, final OwnerShopAdd ownerShopAdd) {
+
+    public void shopAdd(Context context, final Shop shop, final OwnerShopAdd ownerShopAdd) {
         shopAddRef.push().setValue(shop).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
@@ -98,9 +102,9 @@ public class Database {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Boolean flag = false;
-                ArrayList<Shop>shops=new ArrayList<>();
+                ArrayList<Shop> shops = new ArrayList<>();
                 for (DataSnapshot dsp : dataSnapshot.getChildren()) {
-                  //  Shop dbClient = dsp.getValue(Shop.class);
+                    //  Shop dbClient = dsp.getValue(Shop.class);
                     shops.add(dsp.getValue(Shop.class));
 
 
@@ -157,5 +161,7 @@ public class Database {
             }
         });
     }
+
+
 
 }

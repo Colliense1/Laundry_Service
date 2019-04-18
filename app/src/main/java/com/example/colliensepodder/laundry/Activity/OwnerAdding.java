@@ -45,10 +45,13 @@ public class OwnerAdding extends AppCompatActivity {
         editText_pantCost = findViewById(R.id.editText_pantCost);
         editText_blanketCost = findViewById(R.id.editText_blanketCost);
         editText_curtainsCost = findViewById(R.id.editText_curtainsCost);
-        button_add = findViewById(R.id.button_add);
+
         progressBar = findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
         editTextPhoneNumber.setText(LOGGEDIN_OWNER_PHONE);
+
+        button_add = findViewById(R.id.button_add);
+
 
         button_add.setOnClickListener(new View.OnClickListener() {
             @Override

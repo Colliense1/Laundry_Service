@@ -1,5 +1,6 @@
 package com.example.colliensepodder.laundry.Adapter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,7 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.colliensepodder.laundry.Activity.OwnerAdding;
 import com.example.colliensepodder.laundry.Activity.ShowOwnerAddData;
+import com.example.colliensepodder.laundry.Activity.database.Database;
+import com.example.colliensepodder.laundry.Interface.Callback;
 import com.example.colliensepodder.laundry.R;
 import com.example.colliensepodder.laundry.models.Shop;
 
@@ -21,9 +25,11 @@ public class MyShopDetailsAdopter extends RecyclerView.Adapter<MyShopDetailsAdop
 
 
     private ArrayList<Shop> shops;
-    
+    Context mcontext;
+
     public MyShopDetailsAdopter(ArrayList<Shop> data) {
         this.shops = data;
+
     }
 
     @Override
@@ -42,6 +48,14 @@ public class MyShopDetailsAdopter extends RecyclerView.Adapter<MyShopDetailsAdop
         holder.textView_pantCost.setText(shops.get(position).getPantCost().toString());
         holder.textView_blanketCost.setText(shops.get(position).getBlanketCost().toString());
         holder.textView_curtainsCost.setText(shops.get(position).getCurtainCost().toString());
+
+        holder.textView_editShop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+            }
+        });
     }
 
     @Override

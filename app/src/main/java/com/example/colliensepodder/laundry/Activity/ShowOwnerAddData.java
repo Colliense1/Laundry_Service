@@ -53,6 +53,7 @@ public class ShowOwnerAddData extends AppCompatActivity {
                 }
 
                 myShopRV.setAdapter(new MyShopDetailsAdopter(shops));
+
             }
         });
     }
