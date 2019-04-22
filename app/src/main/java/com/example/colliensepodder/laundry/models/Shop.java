@@ -8,7 +8,7 @@ public class Shop {
     String pantCost;
     String blanketCost;
     String curtainCost;
-String email;
+    String email;
 
     public Shop(String shopName, String phoneNumber, String address, String shirtCost, String pantCost, String blanketCost, String curtainCost, String email) {
         this.shopName = shopName;

@@ -37,6 +37,7 @@ public class LaundryListAdapter extends RecyclerView.Adapter<LaundryListAdapter.
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.loundryNameTV.setText(shops.get(position).getShopName().toString());
         holder.loundryAddressTv.setText(shops.get(position).getAddress().toString());
+        holder.LoundryphoneTV.setText(shops.get(position).getPhoneNumber().toString());
 
 
     }
@@ -49,11 +50,13 @@ public class LaundryListAdapter extends RecyclerView.Adapter<LaundryListAdapter.
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView loundryNameTV;
         TextView loundryAddressTv;
+        TextView LoundryphoneTV;
 
         public ViewHolder(View itemView) {
             super(itemView);
             loundryNameTV = itemView.findViewById(R.id.LoundryNameTV);
             loundryAddressTv = itemView.findViewById(R.id.LoundryAddressTV);
+            LoundryphoneTV = itemView.findViewById(R.id.LoundryphoneTV);
         }
     }
 }

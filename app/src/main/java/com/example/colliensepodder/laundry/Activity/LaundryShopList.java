@@ -48,10 +48,11 @@ public class LaundryShopList extends AppCompatActivity {
         });
 
 
+    }
      /*   String[] shopname = {"Calcutta dry cleaners", "Bappi Automatic Dry Cleaners", "Bandbox", "National Laundry Service",
                 "Anando Dry Cleaners", "Mohima Dry Cleaners", "Minhaj Laundry Service", "Modhubazar DryCleaners",
                 "Park View Automatic Dry Cleaners"};*/
 
 
-    }
+
 }
